@@ -16,11 +16,13 @@ app.use("/img", express.static("./public/img"));
 //Middleware so I can parse requests
 app.use(express.urlencoded({ extended: true }));
 
+//Root route
 app.get('/', (req, res) => {
     res.render("index");
     return;
 })
 
+//Listen on PORT
 app.listen(PORT, () => {
     console.log("Node application listening on port " + PORT);
 })
